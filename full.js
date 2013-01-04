@@ -31,7 +31,7 @@
 
 // Initial drawing setup.
 x = y = r = -1;
-f = 0;
+f = I = 0;  // I is used later
 s = 50;
 
 // Shorthands.
@@ -118,7 +118,7 @@ b.appendChild(L);
 
 // Fade the start notification away.
 t(function() {
-	for (I = 0; I < 1E3; I += 10) {
+	for (; I < 1E3; I += 10) {
 		t(function(O) {
 			S.opacity = O;
 		}, I, 1 - (I / 1E3));
