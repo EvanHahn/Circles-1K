@@ -31,6 +31,7 @@
 
 // Initial drawing setup.
 x = y = r = -1;
+f = 0;
 s = 50;
 
 // Shorthands.
@@ -38,11 +39,7 @@ m = Math;
 t = setTimeout;
 
 // Style the <body>.
-B = b.style;
-B.margin = f = 0;  // fill status is also set here.
-B.background = '#000';
-B.fontFamily = 'sans-serif';
-B.overflow = 'hidden';
+b.style.cssText = 'margin:0;background:#000;font-family:sans-serif;overflow:hidden';
 
 // Make the canvas fill the window. Call it right now, but also bind it to the
 // window's resize event. Also, focus the canvas.
@@ -114,10 +111,8 @@ onkeyup = function(E) {
 };
 
 // Make start the notification and put it in the DOM.
-(S = (L = document.createElement('div')).style).position = 'fixed';
+(S = (L = document.createElement('div')).style).cssText = 'position:fixed;background:#fff;text-align:right';
 S.top = S.right = S.padding = '20px';
-S.background = '#fff';
-S.textAlign = 'right';
 L.innerHTML = '<b>circles!</b><br>mouse = draw<br>click = toggle solid<br>up = faster<br>down = slower<br>space = clear';
 b.appendChild(L);
 
