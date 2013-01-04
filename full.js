@@ -62,12 +62,14 @@ b.style.cssText = 'margin:0;background:#000;font-family:sans-serif;overflow:hidd
 		// Draw it!
 		// We ALWAYS draw the stroke and only sometimes fill. This is just to save
 		// bytes.
-		a.beginPath();
-		a.arc(x, y, r, 0, 7);  // I use 7 because 7 > (2 * pi)
-		a.fillStyle = a.strokeStyle = C;
-		a.stroke();
-		if (f)
-			a.fill();
+		with (a) {
+			beginPath();
+			arc(x, y, r, 0, 7);  // I use 7 because 7 > (2 * pi)
+			fillStyle = strokeStyle = C;
+			stroke();
+			if (f)
+				fill();
+		}
 
 	}
 
