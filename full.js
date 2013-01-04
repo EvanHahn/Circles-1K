@@ -59,7 +59,7 @@ B.overflow = 'hidden';
 	t(d, s);
 
 	// If we've started...
-	if (r != -1) {
+	if (r ^ -1) {
 
 		// What color? This is a shorthand for the following:
 		// Math.floor(Math.random() * parseInt('FFFFFF', 16)).toString(16);
