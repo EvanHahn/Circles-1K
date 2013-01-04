@@ -103,7 +103,7 @@ onkeyup = function(E) {
 	if ((K = E.keyCode) == 32)
 		a.clearRect(0, 0, w, h);
 
-	// Change refresh speed.
+	// Change refresh speed with the arrow keys.
 	if (K == 38)
 		s -= 25;
 	if (K == 40)
