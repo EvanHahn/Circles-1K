@@ -55,9 +55,6 @@ B.overflow = 'hidden';
 // Start drawing the circle.
 (d = function() {
 
-	// Go again!
-	t(d, s);
-
 	// If we've started...
 	if (r ^ -1) {
 
@@ -76,6 +73,9 @@ B.overflow = 'hidden';
 			a.fill();
 
 	}
+
+	// Go again!
+	t(d, s);
 
 })();
 
