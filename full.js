@@ -55,20 +55,22 @@ b.style.cssText = 'margin:0;background:#000;font-family:sans-serif;overflow:hidd
 	// If we've started...
 	if (r ^ -1) {
 
-		// What color? This is a shorthand for the following:
-		// Math.floor(Math.random() * parseInt('FFFFFF', 16)).toString(16);
-		C = '#' + ((m.random() * (1 << 24))|0).toString(16);
-
 		// Draw it!
 		// We ALWAYS draw the stroke and only sometimes fill. This is just to save
 		// bytes.
 		with (a) {
+
+			// What color? This is a shorthand for the following:
+			// Math.floor(Math.random() * parseInt('FFFFFF', 16)).toString(16);
+			fillStyle = strokeStyle = '#' + ((m.random() * (1 << 24))|0).toString(16);
+
+			// Draw the arc.
 			beginPath();
 			arc(x, y, r, 0, 7);  // I use 7 because 7 > (2 * pi)
-			fillStyle = strokeStyle = C;
 			stroke();
 			if (f)
 				fill();
+
 		}
 
 	}
