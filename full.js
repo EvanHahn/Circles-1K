@@ -58,22 +58,24 @@ B.overflow = 'hidden';
 	// Go again!
 	t(d, s);
 
-	// Don't draw at the start if we shouldn't.
-	if (r == -1) return;
+	// If we've started...
+	if (r != -1) {
 
-	// What color? This is a shorthand for the following:
-	// Math.floor(Math.random() * parseInt('FFFFFF', 16)).toString(16);
-	C = '#' + ((m.random() * 16777215)|0).toString(16);
+		// What color? This is a shorthand for the following:
+		// Math.floor(Math.random() * parseInt('FFFFFF', 16)).toString(16);
+		C = '#' + ((m.random() * 16777215)|0).toString(16);
 
-	// Draw it!
-	// We ALWAYS draw the stroke and only sometimes fill. This is just to save
-	// bytes.
-	a.beginPath();
-	a.arc(x, y, r, 0, 2 * m.PI);
-	a.fillStyle = a.strokeStyle = C;
-	a.stroke();
-	if (f)
-		a.fill();
+		// Draw it!
+		// We ALWAYS draw the stroke and only sometimes fill. This is just to save
+		// bytes.
+		a.beginPath();
+		a.arc(x, y, r, 0, 2 * m.PI);
+		a.fillStyle = a.strokeStyle = C;
+		a.stroke();
+		if (f)
+			a.fill();
+
+	}
 
 })();
 
