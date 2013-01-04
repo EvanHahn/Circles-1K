@@ -45,10 +45,11 @@ B.fontFamily = 'sans-serif';
 B.overflow = 'hidden';
 
 // Make the canvas fill the window. Call it right now, but also bind it to the
-// window's resize event.
+// window's resize event. Also, focus the canvas.
 (onresize = function() {
 	w = c.width = innerWidth;
 	h = c.height = innerHeight;
+	c.focus();
 })();
 
 // Start drawing the circle.
