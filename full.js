@@ -62,7 +62,7 @@ B.overflow = 'hidden';
 
 	// What color? This is a shorthand for the following:
 	// Math.floor(Math.random() * parseInt('FFFFFF', 16)).toString(16);
-	C = ((m.random() * 16777215)|0).toString(16);
+	C = '#' + ((m.random() * 16777215)|0).toString(16);
 
 	// Draw it!
 	// We ALWAYS draw the stroke and only sometimes fill. This is just to save
