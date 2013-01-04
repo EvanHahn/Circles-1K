@@ -57,7 +57,7 @@ b.style.cssText = 'margin:0;background:#000;font-family:sans-serif;overflow:hidd
 
 		// What color? This is a shorthand for the following:
 		// Math.floor(Math.random() * parseInt('FFFFFF', 16)).toString(16);
-		C = '#' + ((m.random() * 16777215)|0).toString(16);
+		C = '#' + ((m.random() * (1 << 24))|0).toString(16);
 
 		// Draw it!
 		// We ALWAYS draw the stroke and only sometimes fill. This is just to save
