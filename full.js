@@ -53,6 +53,7 @@ b.style.cssText = 'margin:0;background:#000;font-family:sans-serif;overflow:hidd
 (d = function() {
 
 	// If we've started...
+	// (r ^ -1) is equivalent to (r != -1)
 	if (r ^ -1) {
 
 		// Draw it!
